@@ -1,5 +1,5 @@
 {
-  "name": "messenger-native",
+  "name": "messenger-desktop",
   "version": "0.0.0",
   "devDependencies": {
     "grunt": "latest",
