@@ -3,7 +3,7 @@ Messenger Desktop Application
 
 Desktop Application for  windows and mac wrapper around Messenger.com
 
-![Messenger](https://cdn.rawgit.com/radjivC/Messenger-desktop/master/render/MessengerDesktop.png "Messenger Desktop")
+![Messenger](https://cdn.rawgit.com/radjivC/Messenger-desktop/dev/render/MessengerDesktop.png "Messenger Desktop")
 
 ##Version 1.0.0
 
