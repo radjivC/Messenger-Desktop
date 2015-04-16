@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         keep_nw: true,
         platforms: [platform],
       },
-      src: './app/**/*' // Your node-webkit app
+      src: './app/**/*'
     },
   });
 
