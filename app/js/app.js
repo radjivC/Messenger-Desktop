@@ -15,37 +15,6 @@ var isOSX = platform === 'osx64';
 var isWindows = platform === 'win32';
 var isLinux = platform.indexOf('linux') === 0;
 
-// Check for update
-var req = new XMLHttpRequest();
-req.onload = function() {
-  if (req.status < 200 || req.status > 299) {
-    return callback(new Error(req.status));
-  }
-
-  try {
-    var data = JSON.parse(req.responseText);
-    checkNewVersion(null, semver.gt(data.version, manifest.version), data);
-  } catch(error) {
-    callback(error);
-  }
-};
-req.open('get', manifest.manifestUrl, true);
-req.send();
-
-function checkNewVersion(error, newVersionExists, newManifest) {
-  if (error) {
-    return alert('Error while trying to update: ' + error);
-  }
-
-  if (newVersionExists) {
-    var updateMessage = 'There\'s a new version available (' + newManifest.version + ').'
-                        + ' Would you like to download the update now?';
-
-    if (confirm(updateMessage)) {
-      gui.Shell.openExternal(newManifest.packages[platform]);
-    }
-  }
-}
 
 // Create the app menu
 var mainMenu = new gui.Menu({ type: 'menubar' });
@@ -99,26 +68,3 @@ win.on('close', function(quit) {
     }
   }
 });
-
-// Open external urls in the browser
-win.on('new-win-policy', function(frame, url, policy) {
-  gui.Shell.openExternal(url);
-  policy.ignore();
-});
-
-// Listen for DOM load
-window.onload = function() {
-  var app = document.getElementById('app');
-  var titleRegExp = /\((\d)\)/;
-
-  // Watch the iframe every 250ms
-  setInterval(function() {
-    // Sync the title
-    document.title = app.contentDocument.title;
-
-    // Update the badge
-    var match = titleRegExp.exec(document.title);
-    var label = match && match[1] || '';
-    win.setBadgeLabel(label);
-  }, 250);
-}
