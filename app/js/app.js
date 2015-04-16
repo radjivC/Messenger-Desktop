@@ -3,9 +3,6 @@ var nw = require('nw.gui');
 var gui = require('nw.gui');
 var win = gui.Window.get();
 
-
-var manifest = require('./package.json');
-
 var platform = process.platform;
 platform = /^win/.test(platform) ? 'win32'
          : /^darwin/.test(platform) ? 'osx64'
