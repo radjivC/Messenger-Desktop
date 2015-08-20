@@ -8,14 +8,14 @@ Desktop Application for  windows and mac wrapper around Messenger.com
 ##Version 1.0.0
 
 ### Mac
-Download [Messenger Mac ox32](http://inft.ly/uE7inen)
+Download [Messenger Mac ox32](https://github.com/radjivC/Messenger-desktop/releases/download/2.0.0/Messenger.dmg)
 
-Download [Messenger Mac ox64](http://inft.ly/m39YX9C)
+Download [Messenger Mac ox64](https://github.com/radjivC/Messenger-desktop/releases/download/2.0.0/Messenger.dmg)
 
 ### Windows
-Download [Messenger Win ox32](http://inft.ly/Hkad3Pg)
+Download [Messenger Win ox32](http://inft.ly/3kDv58H)
 
-Download [Messenger Win ox64](http://inft.ly/KTJKU2b)
+Download [Messenger Win ox64](http://inft.ly/37MsKk4)
 
 
 ## If you want to build it
