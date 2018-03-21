@@ -5,6 +5,8 @@ Desktop Application for  windows and mac wrapper around Messenger.com
 
 ![Messenger](https://cdn.rawgit.com/radjivC/Messenger-desktop/dev/render/MessengerDesktop.png "Messenger Desktop")
 
+
+
 ##Version 1.0.0
 
 ### Mac
